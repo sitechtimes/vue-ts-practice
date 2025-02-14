@@ -61,6 +61,14 @@ Every time you save a file, this development server will automatically update wi
 
 Open the development server (typically on `localhost:3000`), and use the navigation buttons to navigate between exercises.
 
+### Extra Information
+
+Press `Ctrl` + `Shift` + `P` and run `>Developer: Reload Window` to clear any unintentional errors.
+
+This project is set up with Nuxt, which allows us to, among other things, use imports without writing `import ... from "..."` for each import. If you encounter any errors regarding standard Vue imports (`onMounted`, `ref`, `watch`, etc), try rerunning the development server and reloading your window.
+
+Another thing to note about Nuxt: if you make any crazy changes, the development server will brick and you will encounter a big bad gween ewwow page with big bad scawy ewwows. To fix this, rerun the development server.
+
 ### FINAL: Submit a Pull Request
 
 Once you are done with all of the exercises, you will submit a Pull Request (PR). This is the equivalent of submitting an assignment on Google Classroom.
@@ -76,6 +84,8 @@ The exercises are sorted by topic and can be found in the subdirectory `pages/<t
 I highly recommend that you have a look at them before you start!
 
 Most exercises contain a mistake (or multiple) that causes an error, and it's up to you to fix it! **Some exercises contain tests** _(which can be found in respective `pages/<topic>.test.ts` files)_ **that need to pass for the exercise to be done!**
+
+:warning: **Please avoid looking at any function or component code outside of the `pages/<topic>` or `pages/<topic>.test.ts` files.** If a function is not explictly written in the file, it's intentional!
 
 Look for `// TODO: ` comments for hints on what you need to change. They will be highlighted orange if you installed the recommended extensions.
 
