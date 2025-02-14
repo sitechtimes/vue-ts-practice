@@ -14,7 +14,7 @@ It is recommended you go through the entire project without relying too heavily 
 
 Before you do anything, fork this repository to create a copy of it on your own profile.
 
-<img alt="Gravity Assist" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/fork.png" height="150" />
+<img alt="Gravity Assist" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/fork.png" height="400" />
 
 ### Clone the Repository
 
@@ -67,7 +67,7 @@ Once you are done with all of the exercises, you will submit a Pull Request (PR)
 
 However, if there are any problems with your code, you will be requested to change it. This is how the Advanced class works - it's a very tough and hard and **extremely serious** class!
 
-<img alt="Gravity Assist" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/pr.png" height="150" />
+<img alt="Gravity Assist" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/pr.png" height="400" />
 
 ## Doing Exercises
 
