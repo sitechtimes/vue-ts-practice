@@ -2,7 +2,7 @@
   <header class="flex h-16 w-full items-center justify-around gap-2 border-b-2 border-neutral-300 bg-white shadow-lg">
     <div :class="{ 'du-tooltip du-tooltip-bottom': currentExerciseIndex <= 0 }" data-tip="You're on the first exercise!">
       <button
-        class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5"
+        class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5 active:scale-90"
         :class="currentExerciseIndex > 0 ? 'group hover:bg-neutral-300' : 'cursor-not-allowed opacity-50'"
         :disabled="currentExerciseIndex <= 0"
         @click="router.push(exerciseArray[currentExerciseIndex - 1].route)"
@@ -21,7 +21,7 @@
 
     <div :class="{ 'du-tooltip du-tooltip-bottom': currentExerciseIndex >= exerciseArray.length - 1 }" data-tip="You're on the last exercise!">
       <button
-        class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5"
+        class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5 active:scale-90"
         :class="currentExerciseIndex < exerciseArray.length - 1 ? 'group hover:bg-neutral-300' : 'cursor-not-allowed opacity-50'"
         :disabled="currentExerciseIndex >= exerciseArray.length - 1"
         @click="router.push(exerciseArray[currentExerciseIndex + 1].route)"
