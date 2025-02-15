@@ -113,7 +113,7 @@ async function bookMeeting() {
       <!-- TODO: fix this error -->
       <!-- ! Remember: No looking at the code of any components! -->
       <!-- * No shame if you can't figure it out; move on if you feel stuck! -->
-      <IntroMeeting />
+      <IntroMeeting :meeting="userStore.meetings[0]" />
     </div>
   </div>
 </template>
