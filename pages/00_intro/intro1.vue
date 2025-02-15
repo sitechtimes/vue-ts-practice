@@ -2,7 +2,7 @@
 // @ts-nocheck (we cannot remove lang="ts" from script setup because that would cause alot of problems; instead, we use ts-nocheck to simulate the absence of typescript)
 
 // * So, why TypeScript?
-// TODO: Read over this entire file (including <template>) WITHOUT looking at the console in your browser. See if you can find anything wrong/unclear with this code.
+// TODO: Read over this entire JS file (including <template>) WITHOUT looking at the console in your browser. See if you can find anything wrong/unclear with this code.
 // TODO: When you think you've read it all, go on to the next file.
 
 // * Reminder: Nuxt allows us to auto-import everything. No errors should occur from standard Vue imports like ref, reactive, watch, etc.

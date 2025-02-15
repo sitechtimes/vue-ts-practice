@@ -73,7 +73,7 @@ function login() {
 
 onMounted(() => {
   // * Try adding a dot after importedObjectTs and look at all of the properties!
-  const someVariable = importedObjectTs.actualPiniaStore;
+  const someVariable = importedObjectTs;
   console.log(someVariable);
 });
 
@@ -113,7 +113,7 @@ async function bookMeeting() {
       <!-- TODO: fix this error -->
       <!-- ! Remember: No looking at the code of any components! -->
       <!-- * No shame if you can't figure it out; move on if you feel stuck! -->
-      <IntroMeeting :meeting="userStore.meetings[0]" />
+      <IntroMeeting />
     </div>
   </div>
 </template>

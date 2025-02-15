@@ -66,23 +66,35 @@ function login() {
 }
 ```
 
-Let's take a look at the error when we hover over `mockFetchRequest`:
+Let's take a look at the error when we hover over `mockFetchRequest`: 👆
 
 <img alt="mockFetchRequest error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_1.png" height="300" />
 
-Okay, so a literal translation would be "property `nickname` is missing in type { ...mockFetchRequest } but required in type `User`."
+Okay, so a literal translation would be "property `nickname` is missing in type { ...mockFetchRequest } but required in type `User`." 🔎
 
-When you first read the error, you may have noticed how there's a big chunk of code in the middle. _The big chunk of code may look scary_, but **if you understand what it's trying to say, you can easily abstract it away**, just like how I did in the text above. The big chunk of code in this case is just `mockFetchRequest`.
+When you first read the error, you may have noticed how there's a big chunk of code in the middle. _The big chunk of code may look scary_, but **if you understand what it's trying to say, you can easily abstract it away**, just like how I did in the text above. The big chunk of code in this case is just `mockFetchRequest`. 😱
 
-Okay, so to fix this error, we simply add a `nickname` property to `mockFetchRequest`. Simple enough.
+Okay, so to fix this error, we simply add a `nickname` property to `mockFetchRequest`. Simple enough. 😎
 
 ##### But before we fix the code, let's open the website and test the function.
 
-When you click the "login" button, you may have expected an error in the console. But that's strange, no error appeared?
+When you click the "login" button, you may have expected an error in the console. But that's strange, no error appeared? 😕
 
-That's because TypeScript points out **`TypeError`**s (but sometimes also actual errors). TypeErrors are simply guides to help you write good code; they're more of suggestions than rules. This is because, again, of JavaScript's leniency.
+That's because TypeScript points out **`TypeError`**s (but sometimes also actual errors). TypeErrors are simply guides to help you write good code; they're more of suggestions than rules. This is because, again, of JavaScript's leniency. 🎨
 
-However, we **WANT** TypeErrors in VSCode rather than in the browser. Fixing code in one go is easier than fixing code, testing it, fixing it again, testing it again, and so on and so forth.
+However, we **WANT** TypeErrors in VSCode rather than in the browser. Fixing code in one go is easier than fixing code, testing it, fixing it again, testing it again, and so on and so forth. 🧨
+
+### Let's take a detour and look at the onMounted:
+
+```ts
+onMounted(() => {
+  const someVariable = importedObjectTs.console.log(someVariable);
+});
+```
+
+If you added a dot after `importedObjectTs`, you may have noticed: VSCode tells you all of its properties out of the box! No more guessing games or typos with TypeScript - access your properties with confidence 😎
+
+<img alt="importedObjectTs error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_4.png" height="150" />
 
 ### Okay, let's move on to the next problem: the toggleMeetings function.
 
@@ -94,17 +106,17 @@ function toggleMeetings() {
 }
 ```
 
-Alright, let's do the same thing and just read the error.
+Alright, let's do the same thing and just read the error. 🔎
 
 <img alt="userStore.userInfo error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_2.png" height="200" />
 
-Okay, this is a much more readable error. "`userStore.userInfo` is possibly undefined."
+Okay, this is a much more readable error. "`userStore.userInfo` is possibly undefined." 🎀
 
-Well, this goes back to how we defined `userStore.userInfo` at the top. As a recap, because we didn't specify a value when we created the variable, it **IS** undefined at creation time. Even if we assign it a value 0.000000000001ms after creating it, the variable is _still_ undefined during that 0.000000000001ms.
+Well, this goes back to how we defined `userStore.userInfo` at the top. As a recap, because we didn't specify a value when we created the variable, it **IS** undefined at creation time. Even if we assign it a value 0.000000000001ms after creating it, the variable is _still_ undefined during that 0.000000000001ms. 🤓
 
-Therefore, TypeScript will tell us that the variable _may_ be undefined, so we must handle any case where the variable _is_ undefined.
+Therefore, TypeScript will tell us that the variable _may_ be undefined, so we must handle any case where the variable _is_ undefined. 🥼
 
-The solution to this problem would be to use the **Optional Chaining** operator, which is actually already a JavaScript feature, but you probably never used it before. [Read more about it here.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+The solution to this problem would be to use the **Optional Chaining** operator, which is actually already a JavaScript feature, but you probably never used it before. [Read more about it here.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 🔗
 
 ```ts
 function toggleMeetings() {
@@ -123,19 +135,19 @@ function toggleMeetings() {
 </div>
 ```
 
-As always, let's read the error first.
+As always, let's read the error first. 🔎
 
 <img alt="IntroMeeting error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_3.png" height="350" />
 
-Well, this certainly isn't as readable. As a rule of thumb, if an error looks super complex, just read the bottom part of the error.
+Well, this certainly isn't as readable. As a rule of thumb, if an error looks super complex, just read the bottom part of the error. 🔽
 
-The bottom part of the error reads "Property `meeting` is missing in type `{}` but required in type `{ readonly meeting: Meeting }`".
+The bottom part of the error reads "Property `meeting` is missing in type `{}` but required in type `{ readonly meeting: Meeting }`". ❓
 
-Okay, well the `{}` part must mean the props that we've passed to the component, which is nothing. The `{ readonly meeting: Meeting }` part must mean it's the component's props (since it's readonly), and that fits with the "property `meeting` is missing" part, since it clearly shows that the component's props requires a `meeting` prop.
+Okay, well the `{}` part must mean the props that we've passed to the component, which is nothing. The `{ readonly meeting: Meeting }` part must mean it's the component's props (since it's readonly), and that fits with the "property `meeting` is missing" part, since it clearly shows that the component's props requires a `meeting` prop. 🔬
 
-Knowing how to read, process, and digest errors is a learning process; you won't get it immediately (probably).
+Knowing how to read, process, and digest errors is a learning process; you won't get it immediately (probably). 🧰
 
-So, let's pass an object with type `Meeting` as a prop to the component. Here's the correct code (among many implementations):
+So, let's pass an object with type `Meeting` as a prop to the component. Here's the correct code (among many implementations): ✅
 
 ```vue
 <div v-if="showMeetings === true">
@@ -144,4 +156,4 @@ So, let's pass an object with type `Meeting` as a prop to the component. Here's 
 </div>
 ```
 
-Now that we have an understanding of why we use TypeScript + a basic understanding of TypeScript, let's move on to the actual exercises!
+Now that we have an understanding of why we use TypeScript + a basic understanding of TypeScript, let's move on to the actual exercises! 🎉
