@@ -130,8 +130,8 @@ function toggleMeetings() {
 ### Onto the last problem: the component.
 
 ```vue
-<div v-if="showMeetings === true">
-  <IntroMeeting />
+<div class="..." v-if="showMeetings" @click="showMeetings = false">
+  <IntroMeeting @click.stop />
 </div>
 ```
 
@@ -150,9 +150,9 @@ Knowing how to read, process, and digest errors is a learning process; you won't
 So, let's pass an object with type `Meeting` as a prop to the component. Here's the correct code (among many implementations): ✅
 
 ```vue
-<div v-if="showMeetings === true">
+<div class="..." v-if="showMeetings" @click="showMeetings = false">
   <!-- this implementation will only work if there's a meeting in userStore.meetings! -->
-  <IntroMeeting :meeting="userStore.meetings[0]" />
+  <IntroMeeting :meeting="userStore.meetings[0]" @click.stop />
 </div>
 ```
 

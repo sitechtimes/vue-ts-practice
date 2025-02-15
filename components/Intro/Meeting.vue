@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex w-96 flex-col items-center justify-center rounded-xl bg-white p-10 shadow-lg">
     <p>field 1: {{ meeting?.name?.slice(0) }}</p>
     <p>field 2: {{ meeting?.date?.toLocaleString() }}</p>
     <p>field 3: {{ meeting?.description?.slice(0) }}</p>

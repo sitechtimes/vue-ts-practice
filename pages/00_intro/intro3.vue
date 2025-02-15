@@ -100,22 +100,37 @@ async function bookMeeting() {
 </script>
 
 <template>
-  <div>
-    <h1>Nigerian Prince Bank</h1>
-    <p>Welcome to Nigerian Prince Bank</p>
+  <div class="flex w-2/3 flex-col items-center justify-center rounded-xl bg-blue-200 p-8 hover:shadow-lg">
+    <h1 class="text-2xl">Nigerian Prince Bank</h1>
+    <p class="text-xl font-medium">Welcome to Nigerian Prince Bank</p>
 
-    <button @click="login">login</button>
-
-    <button @click="bookMeeting">book a meeting with your local nigerian prince</button>
-    <button @click="toggleMeetings">toggle your meetings list</button>
-
-    <div v-if="showMeetings === true">
-      <!-- TODO: fix this error -->
-      <!-- ! Remember: No looking at the code of any components! -->
-      <!-- * No shame if you can't figure it out; move on if you feel stuck! -->
-      <IntroMeeting />
+    <div class="mt-8 flex flex-col items-center justify-center gap-3">
+      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" @click="login">login</button>
+      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" @click="bookMeeting">book a meeting with your local nigerian prince</button>
+      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" @click="toggleMeetings">toggle your meetings list</button>
     </div>
+
+    <Teleport to="body">
+      <Transition name="fade">
+        <div class="fixed left-0 top-0 flex h-dvh w-screen items-center justify-center bg-black/50" v-if="showMeetings" @click="showMeetings = false">
+          <!-- TODO: fix this error -->
+          <!-- ! Remember: No looking at the code of any components! -->
+          <!-- * No shame if you can't figure it out; move on if you feel stuck! -->
+          <IntroMeeting @click.stop />
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -122,8 +122,8 @@ Alright, let's move `showMeetings` out of the function and into the global scope
 ### Now, let's go all the way up to the template and look at the component.
 
 ```vue
-<div v-if="showMeetings === true">
-  <IntroMeeting />
+<div class="..." v-if="showMeetings" @click="showMeetings = false">
+  <IntroMeeting @click.stop />
 </div>
 ```
 
