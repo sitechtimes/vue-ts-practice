@@ -1,6 +1,6 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import { describe, expect, test } from "vitest";
 import File from "~/pages/01_variables/variables1.vue";
+import { describe, expect, test } from "vitest";
 
 describe("isEqual", () => {
   test("4 should be equal to 4", async () => {

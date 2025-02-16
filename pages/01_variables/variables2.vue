@@ -1,5 +1,5 @@
 <template>
-  <p>This task does not involve any HTML</p>
+  <p>This exercise does not involve any HTML</p>
 </template>
 
 <script setup lang="ts">
@@ -9,7 +9,7 @@ onMounted(async () => {
   // TODO: refactor the below code to make `serverIsOnline` a `const` variable instead of `let`
   let serverIsOnline: boolean;
 
-  // * You can hover over `status` to see its possible values (god bless typescript)
+  // TODO: optional challenge - refactor this if/else into a 1 liner
   if (serverStatus.status === "online") {
     serverIsOnline = true;
   } else {

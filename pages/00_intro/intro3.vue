@@ -105,9 +105,9 @@ async function bookMeeting() {
     <p class="text-xl font-medium">Welcome to Nigerian Prince Bank</p>
 
     <div class="mt-8 flex flex-col items-center justify-center gap-3">
-      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" @click="login">login</button>
-      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" @click="bookMeeting">book a meeting with your local nigerian prince</button>
-      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" @click="toggleMeetings">toggle your meetings list</button>
+      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" type="button" @click="login">login</button>
+      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" type="button" @click="bookMeeting">book a meeting with your local nigerian prince</button>
+      <button class="w-96 rounded-xl bg-neutral-100/90 px-5 py-2 hover:bg-neutral-100/50" type="button" @click="toggleMeetings">toggle your meetings list</button>
     </div>
 
     <Teleport to="body">

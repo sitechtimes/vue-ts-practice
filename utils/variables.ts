@@ -25,17 +25,19 @@ export type User = {
   lastLoggedIn: Date;
 };
 
+export const loginUserResult: User = {
+  id: 2020,
+  name: "Corvid",
+  email: "crowvid@c0vid.com",
+  provider: "X",
+  lastLoggedIn: new Date("2020-03-15T22:06:00.000Z")
+};
+
 /** Mocks a request to an example backend API endpoint. Returns the logged in user.
  * @docs You can assume that this fetch call will **never** fail. It will **always** return a user.
  * @param username - The username of the user (can be anything in this exercise)
  * @param password - The password of the user (can be anything in this exercise)
  */
 export async function loginUser(username: string, password: string): Promise<User> {
-  return {
-    id: 0,
-    name: "Bob",
-    email: "bob@bob.com",
-    provider: "Google",
-    lastLoggedIn: new Date()
-  };
+  return loginUserResult;
 }

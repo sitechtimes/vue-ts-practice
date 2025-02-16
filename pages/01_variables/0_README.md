@@ -21,8 +21,6 @@ npm run test pages/01_variables/variables1.test.ts
 
 ## Supplemental Info
 
-Want to dig deeper into TypeScript? Check out these resources:
-
-- [TypeScript in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)
-- [TypeScript Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
-- [Using Vue with Typescript](https://vuejs.org/guide/typescript/composition-api.html)
+- [Types of Variables](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables#when_to_use_const_and_when_to_use_let)
+- [Global vs Block Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+- [About JSDoc Documentation](https://jsdoc.app/about-getting-started)

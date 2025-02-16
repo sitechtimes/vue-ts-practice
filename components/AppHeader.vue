@@ -5,6 +5,7 @@
         class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5 active:scale-90"
         :class="currentExerciseIndex > 0 ? 'group hover:bg-neutral-300' : 'cursor-not-allowed opacity-50'"
         :disabled="currentExerciseIndex <= 0"
+        type="button"
         @click="router.push(exerciseArray[currentExerciseIndex - 1].route)"
       >
         <img class="size-5 group-hover:-translate-x-1.5" src="/arrowLeft.svg" aria-hidden="true" />
@@ -24,6 +25,7 @@
         class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5 active:scale-90"
         :class="currentExerciseIndex < exerciseArray.length - 1 ? 'group hover:bg-neutral-300' : 'cursor-not-allowed opacity-50'"
         :disabled="currentExerciseIndex >= exerciseArray.length - 1"
+        type="button"
         @click="router.push(exerciseArray[currentExerciseIndex + 1].route)"
       >
         <span class="translate-y-[0.0625rem] text-xl font-medium">Next</span>
