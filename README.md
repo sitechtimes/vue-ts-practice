@@ -102,4 +102,4 @@ Don't feel ashamed for needing hints! As long as you understand the code, consid
 
 ## Continuing On
 
-Once you've completed these exercises, put your new knowledge to good use! Continue practicing your TypeScript skills by building your own projects, and stuff!
+Once you've completed these exercises, put your new knowledge to good use! Continue practicing your TypeScript skills by building your own projects and stuff!
