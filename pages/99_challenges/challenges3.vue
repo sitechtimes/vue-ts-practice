@@ -110,6 +110,7 @@ function delay(ms: number): Promise<void> {
   }
 })();
 
+// TODO: This function isn't used in the file at all but fix it anyways
 function toggleAssignments() {
   currentStatus.value = !currentStatus.value;
   pastStatus.value = !pastStatus.value;
