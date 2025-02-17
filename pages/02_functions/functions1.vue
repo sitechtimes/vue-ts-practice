@@ -3,9 +3,14 @@
 </template>
 
 <script setup lang="ts">
-// TODO: fix this error
-onMounted(arrowFunction);
-onMounted(regularFunction);
+try {
+  // TODO: fix this error
+  // TODO: also remove the try catch once you've fixed it
+  onMounted(arrowFunction);
+  onMounted(regularFunction);
+} catch (error) {
+  console.error(error);
+}
 
 const arrowFunction = () => {
   console.log("running arrowFunction");

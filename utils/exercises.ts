@@ -1,3 +1,15 @@
+/** Returns a random integer between `min` and `max`, inclusive. */
+export function getRandomInt(min: number, max: number) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+}
+
+/** Returns a random item from an array. */
+export function getRandomItem<T>(arr: T[]) {
+  return arr[getRandomInt(0, arr.length - 1)];
+}
+
 export type Exercise = {
   name: string;
   route: string;
@@ -23,8 +35,8 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       route: "/01_variables/variables1",
       hints: [
         "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment",
-        "Do you know why one test works and the other fails?\n\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment#return_value",
-        "Assignment and Comparison are not the same\n\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality"
+        "Do you know why one test works and the other fails? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment#return_value",
+        "Assignment and Comparison are not the same. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality"
       ]
     },
     {
@@ -59,6 +71,48 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
     {
       name: "Arrow Functions",
       route: "/02_functions/functions1",
+      hints: ["https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"]
+    },
+    {
+      name: "Callbacks",
+      route: "/02_functions/functions2",
+      hints: [
+        "Arrow functions are anonymous functions. https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+        "Read the paragraph under the code block. https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#memory_issues",
+        "Using an arrow function in the addEventListener()'s and removeEventListener()'s callback basically means we're creating a new function in each case, which means removeEventListener() can't find the function we used in addEventListener()."
+      ]
+    },
+    {
+      name: "Parameters",
+      route: "/02_functions/functions3",
+      hints: [
+        "What is stringToConvert ACTUALLY equal to when the function gets called?",
+        "Why is stringToConvert a MouseEvent?",
+        "How can we stop the from receiving a MouseEvent without overriding the default value of stringToConvert?"
+      ]
+    }
+  ],
+  Objects: [
+    {
+      name: "Equality",
+      route: "/03_objects/objects1",
+      hints: ["https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"]
+    }
+  ],
+  Challenges: [
+    {
+      name: "Challenge I",
+      route: "/99_challenges/challenges1",
+      hints: []
+    },
+    {
+      name: "Challenge II",
+      route: "/99_challenges/challenges2",
+      hints: []
+    },
+    {
+      name: "Challenge III",
+      route: "/99_challenges/challenges3",
       hints: []
     }
   ]

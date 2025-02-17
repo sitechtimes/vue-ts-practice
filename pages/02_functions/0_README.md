@@ -5,6 +5,4 @@
 
 ## Supplemental Info
 
-Want to dig deeper into TypeScript? Check out these resources:
-
 - [Function Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)

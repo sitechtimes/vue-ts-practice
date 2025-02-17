@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky left-0 top-[calc(100dvh-4rem)] flex h-[calc(100dvh-4rem)] w-80 shrink-0 flex-col items-center justify-start border-r-2 border-neutral-300 bg-white p-4 shadow-lg">
+  <div class="sticky left-0 top-16 flex h-[calc(100dvh-4rem)] w-80 shrink-0 flex-col items-center justify-start border-r-2 border-neutral-300 bg-white p-4 shadow-lg">
     <h2 class="select-none text-center text-2xl font-semibold">Quick Navigation</h2>
 
     <ul class="mt-4 flex h-[80dvh] w-full flex-col items-start justify-start gap-2 overflow-y-scroll">

@@ -1,5 +1,5 @@
 <template>
-  <header class="flex h-16 w-full items-center justify-around gap-2 border-b-2 border-neutral-300 bg-white shadow-lg">
+  <header class="sticky top-0 z-50 flex h-16 w-full items-center justify-around gap-2 border-b-2 border-neutral-300 bg-white shadow-lg">
     <div :class="{ 'du-tooltip du-tooltip-bottom': currentExerciseIndex <= 0 }" data-tip="You're on the first exercise!">
       <button
         class="flex select-none items-center justify-center gap-2 rounded-xl bg-neutral-200 px-10 py-1.5 active:scale-90"
