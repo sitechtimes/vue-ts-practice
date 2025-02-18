@@ -67,6 +67,6 @@ function removeStudent(index: number) {
 }
 
 function goHome() {
-  router.push(`/`);
+  router.push("/");
 }
 </script>

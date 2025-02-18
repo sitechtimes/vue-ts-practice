@@ -9,7 +9,7 @@
         @click="router.push(exerciseArray[currentExerciseIndex - 1].route)"
       >
         <img class="size-5 group-hover:-translate-x-1.5" src="/arrowLeft.svg" aria-hidden="true" />
-        <span class="translate-y-[0.0625rem] text-xl font-medium">Back</span>
+        <span class="text-xl font-medium">Back</span>
       </button>
     </div>
 
@@ -28,7 +28,7 @@
         type="button"
         @click="router.push(exerciseArray[currentExerciseIndex + 1].route)"
       >
-        <span class="translate-y-[0.0625rem] text-xl font-medium">Next</span>
+        <span class="text-xl font-medium">Next</span>
         <img class="size-5 group-hover:translate-x-1.5" src="/arrowRight.svg" aria-hidden="true" />
       </button>
     </div>

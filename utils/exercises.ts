@@ -96,23 +96,42 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
     {
       name: "Equality",
       route: "/03_objects/objects1",
-      hints: ["https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"]
+      hints: ["Can objects be compared using equality operators?", "Should we be comparing these two objects using equality operators?", "How do we compare every key and value of these two objects?"]
+    },
+    {
+      name: "Profile Problems",
+      route: "/03_objects/objects2",
+      hints: ["https://developer.mozilla.org/en-US/docs/Glossary/Object_reference", "How is editableProfile being created?"]
+    },
+    {
+      name: "Character Chaos",
+      route: "/03_objects/objects3",
+      hints: ["https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy", "Should we be using a shallow copy?", "https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy"]
     }
   ],
   Challenges: [
     {
+      // Abeh Gale
       name: "Challenge I",
       route: "/99_challenges/challenges1",
       hints: []
     },
     {
+      // Rye Lin
       name: "Challenge II",
       route: "/99_challenges/challenges2",
       hints: []
     },
     {
+      // Reye Inch en.
       name: "Challenge III",
       route: "/99_challenges/challenges3",
+      hints: []
+    },
+    {
+      // Cannae thing
+      name: "Challenge IV",
+      route: "/99_challenges/challenges4",
       hints: []
     }
   ]

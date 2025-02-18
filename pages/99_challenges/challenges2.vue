@@ -63,17 +63,12 @@
 // * Context: this code is for a DeltaMath-style assignment, where the user must answer questions correctly to proceed to the next question.
 // * This page specifically is about viewing assignment results after completing it.
 // * This code is adapted from the code of a student in the Advanced class. Let's see if you can code better than them!
-// ! Remember: don't go into the code of any functions that aren't defined in this file; read their documentation by hovering over things instead
 
-// ! dont touch these ---------------------------------------------------
 const currentAssignment = ref<Assignment>();
-
-const assignmentId = computed(() => currentAssignment.value?.id);
 const questions = computed(() => currentAssignment.value?.questions);
 
 const questionsCorrect = computed(() => questions.value?.filter((question) => question.answers.some((answer) => answer.isSelected && answer.isCorrect)).length);
 const numOfQuestions = computed(() => questions.value?.length);
-// ! --------------------------------------------------------------------
 
 onBeforeMount(async () => {
   try {
@@ -96,10 +91,6 @@ function getUserAnswerText(userAnswerId: number | undefined, answers: Answer[]) 
     return answer.id === userAnswerId;
   });
   return userAnswer ? stripHtml(userAnswer.text) : "No Answer Selected";
-}
-
-function stripHtml(html: string) {
-  return html.replace(/<\/?(h3|p)>/g, "");
 }
 
 function getResultText(question: Question) {

@@ -88,13 +88,14 @@ However, we **WANT** TypeErrors in VSCode rather than in the browser. Fixing cod
 
 ```ts
 onMounted(() => {
-  const someVariable = importedObjectTs.console.log(someVariable);
+  const someVariable = importedObjectTs.;
+  console.log(someVariable);
 });
 ```
 
 If you added a dot after `importedObjectTs`, you may have noticed: VSCode tells you all of its properties out of the box! No more guessing games or typos with TypeScript - access your properties with confidence 😎
 
-<img alt="importedObjectTs error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_4.png" height="150" />
+<img alt="importedObjectTs" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_4.png" height="150" />
 
 ### Okay, let's move on to the next problem: the toggleMeetings function.
 
