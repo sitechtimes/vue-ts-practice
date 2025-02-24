@@ -1,12 +1,7 @@
-<template>
-  <div class="flex flex-col items-center justify-center"></div>
-</template>
+<template></template>
 
 <script setup lang="ts">
-const route = useRoute();
+// * this file is not an exercise
 const router = useRouter();
-
-onMounted(() => {});
+onBeforeMount(() => router.replace("/00_intro/intro1"));
 </script>
-
-<style scoped></style>
