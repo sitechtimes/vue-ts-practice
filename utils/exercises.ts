@@ -90,6 +90,14 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
         "Why is stringToConvert a MouseEvent?",
         "How can we stop the from receiving a MouseEvent without overriding the default value of stringToConvert?"
       ]
+    },
+    {
+      name: "Tailwind",
+      route: "/02_functions/functions4",
+      hints: [
+        "Try changing the color shade in the function; try bg-300, bg-200, bg-500. Notice how each variation causes different boxes to be colored.",
+        "Tailwind classes just don't get applied if returned from a function :) Find a different way to color the divs"
+      ]
     }
   ],
   Objects: [
