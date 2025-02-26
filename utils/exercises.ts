@@ -141,6 +141,11 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       name: "Challenge IV",
       route: "/99_challenges/challenges4",
       hints: []
+    },
+    {
+      name: "Challenge V",
+      route: "/99_challenges/challenges5",
+      hints: []
     }
   ]
 };
