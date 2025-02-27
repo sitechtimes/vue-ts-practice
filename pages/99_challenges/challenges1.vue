@@ -55,8 +55,10 @@ type Student = {
 
 const students: Student[] = [
   { id: 1, firstName: "Emerson", lastName: "Yang" },
-  { id: 2, firstName: "idk", lastName: "the rest" },
-  { id: 3, firstName: "of your", lastName: "names" }
+  { id: 2, firstName: "Tina", lastName: "Zhen" },
+  { id: 3, firstName: "Eric", lastName: "Chen" },
+  { id: 4, firstName: "idk", lastName: "the rest" },
+  { id: 5, firstName: "of your", lastName: "names" }
 ];
 const filteredStudents = computed(() => {
   return students.filter((student) => student.firstName.toLowerCase().includes(searchTerm.value.toLowerCase()) || student.lastName.toLowerCase().includes(searchTerm.value.toLowerCase()));

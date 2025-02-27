@@ -117,6 +117,31 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       hints: ["https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy", "Should we be using a shallow copy?", "https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy"]
     }
   ],
+  TypeScript: [
+    {
+      name: "Compiler Catastrophe",
+      route: "/04_typescript/typescript1",
+      hints: []
+    },
+    {
+      name: "Interface Pitfalls",
+      route: "/04_typescript/typescript2",
+      hints: ["https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces It's a \"feature\" but imo it's more of a hinderance. Use types instead of interfaces!"]
+    },
+    {
+      name: "Naming Matters!",
+      route: "/04_typescript/typescript3",
+      hints: []
+    },
+    {
+      name: "Excessive Any",
+      route: "/04_typescript/typescript4",
+      hints: [
+        "Overusing the `any` type can disable type checking, leading to unexpected runtime errors. Asserting an incorrect type with the `as` keyword can mask real type issues and cause runtime failures.",
+        "You may have the masculine urge to assert every type with `any` so TypeScript stops yelling at you, but that's the point of TypeScript. Stop being a bitch"
+      ]
+    }
+  ],
   Challenges: [
     {
       // Abeh Gale
