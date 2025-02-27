@@ -35,8 +35,8 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       route: "/01_variables/variables1",
       hints: [
         "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment",
-        "Do you know why one test works and the other fails? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment#return_value",
-        "Assignment and Comparison are not the same. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality"
+        "Do you know why one test works and the other fails? - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment#return_value",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality - Assignment and Comparison are not the same."
       ]
     },
     {
@@ -77,8 +77,8 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       name: "Callbacks",
       route: "/02_functions/functions2",
       hints: [
-        "Arrow functions are anonymous functions. https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
-        "Read the paragraph under the code block. https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#memory_issues",
+        "Arrow functions are anonymous functions - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+        "Read the paragraph under the code block - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#memory_issues",
         "Using an arrow function in the addEventListener()'s and removeEventListener()'s callback basically means we're creating a new function in each case, which means removeEventListener() can't find the function we used in addEventListener()."
       ]
     },
@@ -126,7 +126,7 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
     {
       name: "Interface Pitfalls",
       route: "/04_typescript/typescript2",
-      hints: ["https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces It's a \"feature\" but imo it's more of a hinderance. Use types instead of interfaces!"]
+      hints: ["https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces - It's a \"feature\" but imo it's more of a hinderance. Use types instead of interfaces!"]
     },
     {
       name: "Naming Matters!",
@@ -139,6 +139,14 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       hints: [
         "Overusing the `any` type can disable type checking, leading to unexpected runtime errors. Asserting an incorrect type with the `as` keyword can mask real type issues and cause runtime failures.",
         "You may have the masculine urge to assert every type with `any` so TypeScript stops yelling at you, but that's the point of TypeScript. Stop being a bitch"
+      ]
+    },
+    {
+      name: "Generic Problems",
+      route: "/04_typescript/typescript5",
+      hints: [
+        "https://www.typescriptlang.org/docs/handbook/2/generics.html - Type Generics are extremely important for writing clean, reusuable code.",
+        "https://kennethng.dev/blog/0001#type-generics - This exercise was taken straight from here :)"
       ]
     }
   ],
