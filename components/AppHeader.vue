@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   exerciseArray: Exercise[];
   currentExerciseIndex: number;
 }>();

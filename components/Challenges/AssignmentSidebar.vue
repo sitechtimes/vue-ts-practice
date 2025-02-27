@@ -30,19 +30,8 @@
       <h4 class="w-64 overflow-hidden overflow-ellipsis text-nowrap text-2xl font-medium">{{ assignment.name }}</h4>
       <p class="text-sm"><strong class="text-sm font-bold">Started</strong> {{ formatDate(assignment.dueDate, currentDate) }}</p>
 
-      <div
-        class="mt-10 w-full"
-        :class="{ 'du-tooltip': !Object.values(assignment.questionInterfaces).every((questionInterface) => questionInterface.answers.some((answer) => answer.isSelected)) }"
-        data-tip="Complete all questions first!"
-      >
-        <button
-          class="w-full rounded-xl bg-green-300 px-5 py-1.5 text-lg font-medium hover:bg-green-400"
-          :class="{ grayscale: !Object.values(assignment.questionInterfaces).every((questionInterface) => questionInterface.answers.some((answer) => answer.isSelected)) }"
-          type="button"
-          @click="submit"
-        >
-          Proceed
-        </button>
+      <div class="mt-10 w-full" :class="{ 'du-tooltip': !assignmentIsComplete }" data-tip="Complete all questions first!">
+        <button class="w-full rounded-xl bg-green-300 px-5 py-1.5 text-lg font-medium hover:bg-green-400" :class="{ grayscale: !assignmentIsComplete }" type="button" @click="submit">Proceed</button>
       </div>
     </div>
   </div>
@@ -56,12 +45,7 @@ const props = defineProps<{
 const emit = defineEmits<{ close: [void] }>();
 
 const currentDate = new Date();
-
-const submitState = reactive({
-  isLoading: false,
-  isSuccess: false,
-  isErrored: false
-});
+const assignmentIsComplete = computed(() => Object.values(props.assignment.questionInterfaces).every((questionInterface) => questionInterface.answers.some((answer) => answer.isSelected)));
 
 async function submit() {
   console.log("non functional for this exercise");

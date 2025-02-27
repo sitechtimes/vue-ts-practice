@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   hint: string;
   index: number;
   currentExerciseHints: [boolean, boolean, boolean];

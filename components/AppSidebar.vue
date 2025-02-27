@@ -24,12 +24,9 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  currentExerciseIndex: number;
-}>();
+defineProps<{ currentExerciseIndex: number }>();
 
 const route = useRoute();
-const router = useRouter();
 </script>
 
 <style scoped>
