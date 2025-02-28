@@ -146,7 +146,7 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
       route: "/04_typescript/typescript5",
       hints: [
         "https://www.typescriptlang.org/docs/handbook/2/generics.html - Type Generics are extremely important for writing clean, reusuable code.",
-        "https://kennethng.dev/blog/0001#type-generics - This exercise was taken straight from here :)"
+        "https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints - You can constrain your generic type to certain types"
       ]
     }
   ],
