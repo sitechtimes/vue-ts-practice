@@ -68,7 +68,7 @@ function login() {
 
 Let's take a look at the error when we hover over `mockFetchRequest`: 👆
 
-<img alt="mockFetchRequest error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_1.png" height="300" />
+<img alt="mockFetchRequest error" src="./public/intro3_1.png" height="300" />
 
 Okay, so a literal translation would be "property `nickname` is missing in type { ...mockFetchRequest } but required in type `User`." 🔎
 
@@ -95,7 +95,7 @@ onMounted(() => {
 
 If you added a dot after `importedObjectTs`, you may have noticed: VSCode tells you all of its properties out of the box! No more guessing games or typos with TypeScript - access your properties with confidence 😎
 
-<img alt="importedObjectTs" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_4.png" height="150" />
+<img alt="importedObjectTs" src="./public/intro3_4.png" height="150" />
 
 ### Okay, let's move on to the next problem: the toggleMeetings function.
 
@@ -109,7 +109,7 @@ function toggleMeetings() {
 
 Alright, let's do the same thing and just read the error. 🔎
 
-<img alt="userStore.userInfo error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_2.png" height="200" />
+<img alt="userStore.userInfo error" src="./public/intro3_2.png" height="200" />
 
 Okay, this is a much more readable error. "`userStore.userInfo` is possibly undefined." 🎀
 
@@ -138,7 +138,7 @@ function toggleMeetings() {
 
 As always, let's read the error first. 🔎
 
-<img alt="IntroMeeting error" src="https://github.com/sitechtimes/vue-ts-practice/blob/main/public/intro3_3.png" height="350" />
+<img alt="IntroMeeting error" src="./public/intro3_3.png" height="350" />
 
 Well, this certainly isn't as readable. As a rule of thumb, if an error looks super complex, just read the bottom part of the error. 🔽
 
