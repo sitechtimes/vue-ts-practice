@@ -26,56 +26,97 @@ function grantVip(user: RobloxUser) {
               console.error("why are you following so many children 🤨🤨🤨🤨🤨🤨🤨🤨🤨🤨🤨");
             } else {
               if (user.membershipStatus === "Turbo Builders Club" || user.membershipStatus === "Outrageous Builders Club") {
-                if (user.isDarkMode === false) {
-                  console.warn("make your theme dark");
-                } else {
-                  if (user.isDarkMode === true) {
-                    if (user.birthday.getTime() > new Date("2007-01-01").getTime()) {
-                      if (user.joinDate.getTime() < user.birthday.getTime()) {
-                        console.error("how did u make an account before u were born??");
-                      } else if (user.joinDate.getTime() >= user.birthday.getTime()) {
-                        let totalItemValue = 0;
-                        for (let i = 0; i < user.avatarItems.length; i++) {
-                          totalItemValue = totalItemValue + user.avatarItems[i].value;
-                          if (user.avatarItems[i].isLimited) totalItemValue *= 10;
-                        }
-                        if (totalItemValue < 10000) {
-                          console.error("buy more robux pooron");
+                if (user.isDarkMode === true) {
+                  if (user.birthday.getTime() > new Date("2007-01-01").getTime()) {
+                    if (user.joinDate.getTime() < user.birthday.getTime()) {
+                      console.error("how did u make an account before u were born??");
+                    } else if (user.joinDate.getTime() >= user.birthday.getTime()) {
+                      let totalItemValue = 0;
+                      for (let i = 0; i < user.avatarItems.length; i++) {
+                        totalItemValue = totalItemValue + user.avatarItems[i].value;
+                        if (user.avatarItems[i].isLimited) totalItemValue *= 10;
+                      }
+                      if (totalItemValue < 10000) {
+                        console.error("buy more robux pooron");
+                      } else {
+                        if (totalItemValue < 50000) {
+                          console.error("still too poor pooron");
                         } else {
-                          if (totalItemValue < 50000) {
-                            console.error("still too poor pooron");
+                          if (totalItemValue < 100000) {
+                            console.error("yawn");
                           } else {
-                            if (totalItemValue < 100000) {
-                              console.error("yawn");
-                            } else {
-                              if (totalItemValue > 50000000000) {
-                                let hasBCBadge = false;
-                                user.badges.forEach((badge) => {
-                                  if (badge === "Welcome To The Club Badge") {
-                                    hasBCBadge = true;
-                                  } else {
-                                    hasBCBadge = false;
-                                  }
-                                });
-                                if (hasBCBadge) {
-                                  if (user.groups.includes("StyLiS Studios")) {
-                                    isVip.value = true;
-                                  } else {
-                                    isVip.value = false;
-                                  }
+                            if (totalItemValue > 50000000000) {
+                              let hasBCBadge = false;
+                              user.badges.forEach((badge) => {
+                                if (badge === "Welcome To The Club Badge") {
+                                  hasBCBadge = true;
                                 } else {
-                                  console.error("get out of here zoomer");
+                                  hasBCBadge = false;
+                                }
+                              });
+                              if (hasBCBadge) {
+                                if (user.groups.includes("StyLiS Studios")) {
+                                  isVip.value = true;
+                                } else {
+                                  isVip.value = false;
                                 }
                               } else {
+                                console.error("get out of here zoomer");
                               }
+                            } else {
                             }
                           }
                         }
                       }
-                    } else {
-                      console.error("too old boomer");
                     }
                   } else {
+                    console.error("too old boomer");
+                  }
+                } else {
+                  if (user.birthday.getTime() > new Date("2007-01-01").getTime()) {
+                    if (user.joinDate.getTime() < user.birthday.getTime()) {
+                      console.error("how did u make an account before u were born??");
+                    } else if (user.joinDate.getTime() >= user.birthday.getTime()) {
+                      let totalItemValue = 0;
+                      for (let i = 0; i < user.avatarItems.length; i++) {
+                        totalItemValue = totalItemValue + user.avatarItems[i].value;
+                        if (user.avatarItems[i].isLimited) totalItemValue * 10;
+                      }
+                      if (totalItemValue < 10000) {
+                        console.error("buy more robux pooron");
+                      } else {
+                        if (totalItemValue < 50000) {
+                          console.error("still too poor pooron");
+                        } else {
+                          if (totalItemValue < 100000) {
+                            console.error("yawn");
+                          } else {
+                            if (totalItemValue > 50000000000) {
+                              let hasBCBadge = false;
+                              user.badges.forEach((badge) => {
+                                if (badge === "Welcome To The Club Badge") {
+                                  hasBCBadge = true;
+                                } else {
+                                  hasBCBadge = false;
+                                }
+                              });
+                              if (hasBCBadge) {
+                                if (user.groups.includes("StyLiS Studios")) {
+                                  isVip.value = true;
+                                } else {
+                                  isVip.value = false;
+                                }
+                              } else {
+                                console.error("get out of here zoomer");
+                              }
+                            } else {
+                            }
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    console.error("too old boomer");
                   }
                 }
               } else {

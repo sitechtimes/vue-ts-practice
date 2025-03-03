@@ -74,8 +74,42 @@ describe("grantVip", () => {
           isLimited: true
         }
       ],
-      badges: ["Veteran Badge", "Welcome To The Club Badge", "Bricksmith Badge"],
+      badges: ["Veteran Badge", "Welcome To The Club Badge", "Combat Initiation Badge"],
       groups: ["Paradoxium Games", "StyLiS Studios"]
+    };
+
+    grantVip(user);
+
+    expect(isVip.value).toBe(true);
+  });
+
+  test("also should be granted vip", async () => {
+    const page = await mountSuspended(File);
+    const isVip = ref(page.vm.isVip);
+    const grantVip = page.vm.grantVip;
+
+    const user: RobloxUser = {
+      recentlyPlayed: ["Phantom Forces", "Jailbreak"],
+      favoriteGames: ["Murder Mystery 2"],
+      robux: 99999999999999,
+      friends: 3,
+      followers: 9,
+      membershipStatus: "Outrageous Builders Club",
+      isDarkMode: false,
+      birthday: new Date("2011-06-16"),
+      joinDate: new Date("2016-09-04"),
+      avatarItems: [
+        {
+          value: 4636755246,
+          isLimited: true
+        },
+        {
+          value: 62355456,
+          isLimited: true
+        }
+      ],
+      badges: ["Bricksmith Badge", "Welcome To The Club Badge"],
+      groups: ["Paradoxium Games", "StyLiS Studios", "ROLVe", "Chillz Studios"]
     };
 
     grantVip(user);
