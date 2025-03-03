@@ -98,6 +98,14 @@ export const exercises: Readonly<Record<string, Exercise[]>> = {
         "Try changing the color shade in the function; try bg-300, bg-200, bg-500. Notice how each variation causes different boxes to be colored.",
         "Tailwind classes just don't get applied if returned from a function :) Find a different way to color the divs"
       ]
+    },
+    {
+      name: "On Guard",
+      route: "/02_functions/functions5",
+      hints: [
+        "Go down the if/else hellhole and try to mentally go through the function as you go through each if/else block.",
+        "https://www.geeksforgeeks.org/guard-clause-in-javascript - try rewriting the function using guard clauses instead of the if/else hell it currently is."
+      ]
     }
   ],
   Objects: [

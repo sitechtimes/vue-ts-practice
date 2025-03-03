@@ -9,8 +9,8 @@ const wendys = ref<Wendys[]>([]);
 const burgerKings = ref<BurgerKing[]>([]);
 
 onMounted(async () => {
-  const wendysLocations: Wendys[] = await getAllWendys();
-  const burgerKingLocations: BurgerKing[] = await getAllBurgerKings();
+  const wendysLocations = await getAllWendys();
+  const burgerKingLocations = await getAllBurgerKings();
   wendys.value = findNearbyLocations(wendysLocations, 5);
   burgerKings.value = findNearbyLocations(burgerKingLocations, 5);
 });
